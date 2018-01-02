@@ -12,6 +12,8 @@ import "C"
 import (
 	"errors"
 	"unsafe"
+	"fmt"
+		
 )
 
 func ezcaInit() {
@@ -20,7 +22,7 @@ func ezcaInit() {
 }
 
 func LongGet(pv string) (int, error) {
-	errors.New("yes sir")
+	fmt.printf("yes sir")
 	ezcaInit()
 	result := new(int)
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
