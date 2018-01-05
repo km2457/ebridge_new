@@ -17,8 +17,8 @@ import (
 )
 
 func ezcaInit() {
-	C.ezcaSetTimeout(2)
-	C.ezcaSetRetryCount(3)
+	C.ezcaSetTimeout(0.5)
+	C.ezcaSetRetryCount(5)
 }
 
 func LongGet(pv string) (int, error) {
@@ -29,7 +29,7 @@ func LongGet(pv string) (int, error) {
 	if ezcaReturn != C.EZCA_OK {
 		return -1, errors.New("long PV获取失败")
 	}
-	errors.New(ezcaReturn)
+	
 	return *result, nil
 }
 
