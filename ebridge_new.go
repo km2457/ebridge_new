@@ -18,7 +18,7 @@ import (
 )
 
 func ezcaInit() {
-	C.ezcaSetTimeout(1)
+	C.ezcaSetTimeout(1.0)
 	C.ezcaSetRetryCount(2)
 }
 
