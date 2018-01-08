@@ -18,8 +18,8 @@ import (
 )
 
 func ezcaInit() {
-	C.ezcaSetTimeout(1.0)
-	C.ezcaSetRetryCount(2)
+	C.ezcaSetTimeout(0.2)
+	C.ezcaSetRetryCount(20)
 }
 
 func LongGet(pv string) (int, error) {
