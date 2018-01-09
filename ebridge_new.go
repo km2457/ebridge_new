@@ -27,7 +27,7 @@ func LongGet(pv string) (int, error) {
 	C.ezcaAutoErrorMessageOn()
 	result := new(int)
 	//rawResult := make([]byte, 100)
-	var error_msg_buff *char='a' 
+	error_msg_buff :=C.char('a') 
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	
 	fmt.Println(ezcaReturn)
