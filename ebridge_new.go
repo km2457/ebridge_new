@@ -28,7 +28,7 @@ func LongGet(pv string) (int, error) {
 	result := new(int)
 	C.ezcaStartGroup()
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
-	C.ezcaEndGroup()
+	
 	fmt.Println(ezcaReturn)
 
 	//
