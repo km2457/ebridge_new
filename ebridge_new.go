@@ -48,7 +48,6 @@ func LongGet(pv string) (int, error) {
 
 func StringGet(pv string) (string, error) {
 	ezcaInit()
-	rawResult := "AAA"
 	src := C.CBytes(rawResult)
 
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaString, 1, src)
