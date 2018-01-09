@@ -12,7 +12,7 @@ import "C"
 import (
 	"errors"
 	"unsafe"
-	//"fmt"
+	"fmt"
 
 		
 )
@@ -32,7 +32,10 @@ func LongGet(pv string) (int, error) {
 	//fmt.Println(*result)
 	//
 	if ezcaReturn != C.EZCA_OK {
+		ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
+		if ezcaReturn != C.EZCA_OK {
 		return -1, errors.New("long PV获取失败")
+		}
 	}
 	
 	return *result, nil
