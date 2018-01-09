@@ -28,17 +28,17 @@ func LongGet(pv string) (int, error) {
 	result := new(int)
 	C.ezcaStartGroup()
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
-	
+	C.ezcaEndGroup()
 	fmt.Println(ezcaReturn)
 
 	//
-	if C.ezcaEndGroup(){
+
 	if ezcaReturn != C.EZCA_OK {
 		ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 		if ezcaReturn != C.EZCA_OK {
 			
 		return -1, errors.New("long PV获取失败")
-			}
+
 		}
 	}
 	C.ezcaEndGroup()
