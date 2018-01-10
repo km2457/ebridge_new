@@ -13,16 +13,19 @@ import (
 	"errors"
 	"unsafe"
 	"fmt"
+	"time"
 
 		
 )
 
 func ezcaInit() {
 	C.ezcaSetTimeout(0.2)
-	C.ezcaSetRetryCount(18)
+	C.ezcaSetRetryCount(9)
 }
 
 func LongGet(pv string) (int, error) {
+	
+	 time.Sleep(time.Second * 1)
 	ezcaInit()
 	result := new(int)
 	
