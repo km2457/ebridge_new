@@ -13,7 +13,7 @@ import (
 	"errors"
 	"unsafe"
 	"fmt"
-	"time"
+//	"time"
 
 		
 )
@@ -37,7 +37,7 @@ func LongGet(pv string) (int, error) {
 	if ezcaReturn != C.EZCA_OK {
 		return -1, errors.New("long PV获取失败")
 	}
-	 time.Tick(time.Second * 1)
+//	 time.Tick(time.Second * 1)
 	return *result, nil
 }
 
