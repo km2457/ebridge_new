@@ -13,7 +13,7 @@ import (
 	"errors"
 	"unsafe"
 	"fmt"
-	"time"
+//	"time"
 
 		
 )
@@ -25,7 +25,7 @@ func ezcaInit() {
 
 func LongGet(pv string) (int, error) {
 	
-	 time.Sleep(time.Second * 1)
+	// time.Sleep(time.Second * 1)
 	ezcaInit()
 	result := new(int)
 	
