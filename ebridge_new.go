@@ -13,7 +13,7 @@ import (
 	"errors"
 	"unsafe"
 	"fmt"
-	"time"
+//	"time"
 
 		
 )
@@ -24,8 +24,7 @@ func ezcaInit() {
 }
 
 func LongGet(pv string) (int, error) {
-	
-	
+
 	ezcaInit()
 	result := new(int)
 	
