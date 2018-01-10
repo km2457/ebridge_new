@@ -34,7 +34,7 @@ func LongGet(pv string) (int, error) {
 	//
 
 	if ezcaReturn != C.EZCA_OK {
-	C.ezcaGetErrorString(nil, &buff);
+	C.ezcaGetErrorString(nil, buff);
 	C.printf("Get Error: %s\n", buff);
 			
 		return -1, errors.New("long PV获取失败")
