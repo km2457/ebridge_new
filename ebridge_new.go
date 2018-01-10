@@ -25,7 +25,7 @@ func ezcaInit() {
 
 func LongGet(pv string) (int, error) {
 	
-	// time.Sleep(time.Second * 1)
+	
 	ezcaInit()
 	result := new(int)
 	
@@ -43,7 +43,7 @@ func LongGet(pv string) (int, error) {
 
 		
 	}
-	
+	 time.Sleep(time.Second * 1)
 	return *result, nil
 }
 
