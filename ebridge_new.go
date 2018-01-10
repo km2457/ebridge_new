@@ -13,14 +13,14 @@ import (
 	"errors"
 	"unsafe"
 	"fmt"
-//	"time"
+	"time"
 
 		
 )
 
 func ezcaInit() {
-	C.ezcaSetTimeout(0.5)
-	C.ezcaSetRetryCount(10)
+	C.ezcaSetTimeout(0.2)
+	C.ezcaSetRetryCount(9)
 }
 
 func LongGet(pv string) (int, error) {
@@ -35,14 +35,9 @@ func LongGet(pv string) (int, error) {
 	//
 
 	if ezcaReturn != C.EZCA_OK {
-		
-	
-			
 		return -1, errors.New("long PV获取失败")
-
-		
 	}
-	// time.Sleep(time.Second * 1)
+	 time.Sleep(time.Second * 1)
 	return *result, nil
 }
 
