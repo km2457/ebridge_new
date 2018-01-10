@@ -28,12 +28,15 @@ func LongGet(pv string) (int, error) {
 	result := new(int)
 	
 	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
-	
+	rawResult := make([]byte, 100)
+	buff := C.CBytes(rawResult)
 	fmt.Println(ezcaReturn)
 
 	//
 
 	if ezcaReturn != C.EZCA_OK {
+		
+	
 	C.ezcaGetErrorString(nil, buff);
 	C.printf("Get Error: %s\n", buff);
 			
