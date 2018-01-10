@@ -42,7 +42,7 @@ func LongGet(pv string) (int, error) {
 
 		
 	}
-	 time.Sleep(time.Second * 1)
+	// time.Sleep(time.Second * 1)
 	return *result, nil
 }
 
