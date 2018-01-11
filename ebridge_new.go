@@ -24,7 +24,7 @@ func ezcaInit() {
 }
 
 func LongGet(pv string) (int, error) {
-	C.ezcaAutoErrorMessageOff()
+	//C.ezcaAutoErrorMessageOff()
 	ezcaInit()
 	result := new(int)
 	
