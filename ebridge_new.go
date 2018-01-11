@@ -26,7 +26,7 @@ func ezcaInit() {
 func LongGet(pv string) (int, error) {
 	//C.ezcaAutoErrorMessageOff()
 	ezcaInit()
-	result := new(C.int)
+	result := new(C.long)
 	
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
