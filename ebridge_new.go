@@ -116,7 +116,7 @@ func LongGetmoni2(pv string) (int,error) {
 		return  -1,errors.New("long PV获取失败")
 	}
 
-	return  ezcaReturn,nil
+	return  *ezcaReturn,nil
 }
 
 
