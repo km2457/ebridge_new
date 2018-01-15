@@ -79,17 +79,12 @@ func BoolGet(pv string) (int16, error) {
 
 func LongGetmoni(pv string) (int, error) {
 
-
-
-	
-	
-	
 	ezcaInit()
 	//result := new(C.int)
 	//var result unsigned long  = 0;
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
-	result := new(C.ulong)
+	result := C.ulong(1)
 	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong,result)
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
