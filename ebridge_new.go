@@ -96,7 +96,7 @@ func LongGetmoni(pv string) (int,error) {
 		return  -1,errors.New("long PV获取失败")
 	}
 
-	return  *result,nil
+	return  nil
 }
 
 
@@ -104,7 +104,7 @@ func LongGetmoni(pv string) (int,error) {
 func LongGetmoni2(pv string) (int,error) {
 
 	ezcaInit()
-	result := new(int)
+	result := new(C.int)
 	
 	
 	//result := C.ulong
