@@ -96,6 +96,6 @@ func LongGetmoni(pv string) (int, error) {
 		return -1, errors.New("long PV获取失败")
 	}
 
-	return *result, nil
+	return  nil
 }
 
