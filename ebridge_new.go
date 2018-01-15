@@ -95,8 +95,8 @@ func LongGetmoni(pv string) (int, error) {
 	//var result unsigned long  = 0;
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
-	//result_1 := new(C.ulong)
-	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong, Student{id:1})
+	result := new(C.ulong)
+	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong,result)
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
 	if ezcaReturn != C.EZCA_OK {
