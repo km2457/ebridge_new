@@ -18,6 +18,13 @@ import (
 		
 )
 
+type Student struct{
+    id unsigned long
+    
+}
+
+
+
 func ezcaInit() {
 	C.ezcaSetTimeout(0.2)
 	C.ezcaSetRetryCount(9)
@@ -77,10 +84,7 @@ func BoolGet(pv string) (int16, error) {
 
 
 func LongGetmoni(pv string) (int, error) {
-type Student struct{
-    id unsigned long
-    
-}
+
 
 
 	
