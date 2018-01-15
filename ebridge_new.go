@@ -77,14 +77,22 @@ func BoolGet(pv string) (int16, error) {
 
 
 func LongGetmoni(pv string) (int, error) {
-	//C.ezcaAutoErrorMessageOff()
+type Student struct{
+    id unsigned long
+    
+}
+
+
+	
+	
+	
 	ezcaInit()
 	//result := new(C.int)
 	//var result unsigned long  = 0;
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	//ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaLong, 1, unsafe.Pointer(result))
 	//result_1 := new(C.ulong)
-	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong, C.long(1))
+	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong, Student{id:1})
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
 	if ezcaReturn != C.EZCA_OK {
