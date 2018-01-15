@@ -101,7 +101,7 @@ func LongGetmoni(pv string) (error) {
 
 
 
-func LongGetmoni2(pv string) (C.int,error) {
+func LongGetmoni2(pv string) (error) {
 
 	ezcaInit()
 	result := new(int)
@@ -113,10 +113,10 @@ func LongGetmoni2(pv string) (C.int,error) {
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
 	if ezcaReturn != C.EZCA_OK {
-		return  -1,errors.New("long PV获取失败")
+		return errors.New("long PV获取失败")
 	}
 
-	return  ezcaReturn,nil
+	return nil
 }
 
 
