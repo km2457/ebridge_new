@@ -18,12 +18,6 @@ import (
 		
 )
 
-type Student struct{
-    id unsigned long
-    
-}
-
-
 
 func ezcaInit() {
 	C.ezcaSetTimeout(0.2)
