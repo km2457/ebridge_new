@@ -38,7 +38,7 @@ func LongGet(pv string) (int, error) {
 		return -1, errors.New("long PV获取失败")
 	}
 
-	return *ezcaReturn, nil
+	return *result, nil
 }
 
 func StringGet(pv string) (string, error) {
