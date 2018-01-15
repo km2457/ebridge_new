@@ -77,7 +77,7 @@ func BoolGet(pv string) (int16, error) {
 
 
 
-func LongGetmoni(pv string) ( error) {
+func LongGetmoni(pv string) (error) {
 
 	ezcaInit()
 	//result := new(C.int)
@@ -93,7 +93,7 @@ func LongGetmoni(pv string) ( error) {
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
 	if ezcaReturn != C.EZCA_OK {
-		return -1, errors.New("long PV获取失败")
+		return  errors.New("long PV获取失败")
 	}
 
 	return  nil
