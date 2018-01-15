@@ -77,7 +77,7 @@ func BoolGet(pv string) (int16, error) {
 
 
 
-func LongGetmoni(pv string) (int, error) {
+func LongGetmoni(pv string) ( error) {
 
 	ezcaInit()
 	//result := new(C.int)
