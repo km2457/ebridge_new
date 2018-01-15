@@ -88,7 +88,7 @@ func LongGetmoni(pv string) (int, error) {
 	
 	
 	//result := C.ulong
-	var r C.ulong = C.rand()
+	var r C.ulong = 1
 	ezcaReturn := C.ezcaSetMonitor(C.CString(pv), C.ezcaLong,r)
 	//ezcaReturn := C.ezcaSetMonitor(C.CString(pv),C.ezcaLong,unsafe.Pointer(result))
 	fmt.Println(ezcaReturn)
