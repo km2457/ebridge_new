@@ -57,7 +57,7 @@ func StringGet(pv string) (string, error) {
 func DoubleGet(pv string) (float64, error) {
 	ezcaInit()
 	result := new(float64)
-	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaDouble, 1, result)
+	ezcaReturn := C.ezcaGet(C.CString(pv), C.ezcaDouble, 1, unsafe.Pointer(result))
 	if ezcaReturn != C.EZCA_OK {
 		return -1, errors.New("double PV获取失败")
 	}
