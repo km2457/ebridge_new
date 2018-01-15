@@ -101,7 +101,7 @@ func LongGetmoni(pv string) (error) {
 
 
 
-func LongGetmoni2(pv string) (int,error) {
+func LongGetmoni2(pv string) (C.int,error) {
 
 	ezcaInit()
 	result := new(int)
