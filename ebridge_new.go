@@ -77,7 +77,7 @@ func BoolGet(pv string) (int16, error) {
 
 
 
-func LongGetmoni(pv string) (error) {
+func LongGetmoni(pv string) (int,error) {
 
 	ezcaInit()
 	//result := new(C.int)
@@ -96,6 +96,6 @@ func LongGetmoni(pv string) (error) {
 		return  errors.New("long PV获取失败")
 	}
 
-	return  nil
+	return  *result,nil
 }
 
